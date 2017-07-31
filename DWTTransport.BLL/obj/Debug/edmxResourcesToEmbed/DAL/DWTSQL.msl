@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LogisticsModelStoreContainer" CdmEntityContainer="LogisticsEntities">
+    <EntitySetMapping Name="tblCustomers">
+      <EntityTypeMapping TypeName="LogisticsModel.tblCustomer">
+        <MappingFragment StoreEntitySet="tblCustomer">
+          <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+          <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+          <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+          <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+          <ScalarProperty Name="Gen_WorkingFolder" ColumnName="Gen_WorkingFolder" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="WorkingFolder" ColumnName="WorkingFolder" />
+          <ScalarProperty Name="SysCode" ColumnName="SysCode" />
+          <ScalarProperty Name="Colour" ColumnName="Colour" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="CustID" ColumnName="CustID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDrivers">
+      <EntityTypeMapping TypeName="LogisticsModel.tblDriver">
+        <MappingFragment StoreEntitySet="tblDriver">
+          <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+          <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+          <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+          <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Hint" ColumnName="Hint" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Initial" ColumnName="Initial" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblJobs">
+      <EntityTypeMapping TypeName="LogisticsModel.tblJob">
+        <MappingFragment StoreEntitySet="tblJob">
+          <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+          <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+          <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+          <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+          <ScalarProperty Name="Gen_Notes" ColumnName="Gen_Notes" />
+          <ScalarProperty Name="Gen_Journey" ColumnName="Gen_Journey" />
+          <ScalarProperty Name="Gen_Address" ColumnName="Gen_Address" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="UseReturn" ColumnName="UseReturn" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="BasePrice" ColumnName="BasePrice" />
+          <ScalarProperty Name="Journey" ColumnName="Journey" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="CustRef" ColumnName="CustRef" />
+          <ScalarProperty Name="JobRef" ColumnName="JobRef" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="MiscCode" ColumnName="MiscCode" />
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="DriverTimeStamp" ColumnName="DriverTimeStamp" />
+          <ScalarProperty Name="DriverInitials" ColumnName="DriverInitials" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="dtTo" ColumnName="dtTo" />
+          <ScalarProperty Name="dtFrom" ColumnName="dtFrom" />
+          <ScalarProperty Name="SysCode" ColumnName="SysCode" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerCol" ColumnName="CustomerCol" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblJob_Conflict">
+      <EntityTypeMapping TypeName="LogisticsModel.tblJob_Conflict">
+        <MappingFragment StoreEntitySet="tblJob_Conflict">
+          <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+          <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+          <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+          <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+          <ScalarProperty Name="Gen_Notes" ColumnName="Gen_Notes" />
+          <ScalarProperty Name="Gen_Journey" ColumnName="Gen_Journey" />
+          <ScalarProperty Name="Gen_Address" ColumnName="Gen_Address" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="UseReturn" ColumnName="UseReturn" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="BasePrice" ColumnName="BasePrice" />
+          <ScalarProperty Name="Journey" ColumnName="Journey" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="CustRef" ColumnName="CustRef" />
+          <ScalarProperty Name="JobRef" ColumnName="JobRef" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="MiscCode" ColumnName="MiscCode" />
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="DriverTimeStamp" ColumnName="DriverTimeStamp" />
+          <ScalarProperty Name="DriverInitials" ColumnName="DriverInitials" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="dtTo" ColumnName="dtTo" />
+          <ScalarProperty Name="dtFrom" ColumnName="dtFrom" />
+          <ScalarProperty Name="SysCode" ColumnName="SysCode" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerCol" ColumnName="CustomerCol" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+          <ScalarProperty Name="ConflictRowId" ColumnName="ConflictRowId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblJourneys">
+      <EntityTypeMapping TypeName="LogisticsModel.tblJourney">
+        <MappingFragment StoreEntitySet="tblJourney">
+          <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+          <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+          <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+          <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+          <ScalarProperty Name="Gen_Journey" ColumnName="Gen_Journey" />
+          <ScalarProperty Name="Base" ColumnName="Base" />
+          <ScalarProperty Name="Journey" ColumnName="Journey" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTransactions">
+      <EntityTypeMapping TypeName="LogisticsModel.tblTransaction">
+        <MappingFragment StoreEntitySet="tblTransactions">
+          <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+          <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+          <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+          <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+          <ScalarProperty Name="Gen_Details" ColumnName="Gen_Details" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="TID" ColumnName="TID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTransactions_Conflict">
+      <EntityTypeMapping TypeName="LogisticsModel.tblTransactions_Conflict">
+        <MappingFragment StoreEntitySet="tblTransactions_Conflict">
+          <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+          <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+          <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+          <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+          <ScalarProperty Name="Gen_Details" ColumnName="Gen_Details" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="TID" ColumnName="TID" />
+          <ScalarProperty Name="ConflictRowId" ColumnName="ConflictRowId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

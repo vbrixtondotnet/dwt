@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DWTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblCustomer">
+    <Key>
+      <PropertyRef Name="CustID" />
+    </Key>
+    <Property Name="CustID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="Colour" Type="int" />
+    <Property Name="SysCode" Type="bit" />
+    <Property Name="WorkingFolder" Type="nvarchar(max)" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="Gen_WorkingFolder" Type="int" />
+    <Property Name="s_ColLineage" Type="image" />
+    <Property Name="s_Generation" Type="int" />
+    <Property Name="s_GUID" Type="uniqueidentifier" />
+    <Property Name="s_Lineage" Type="image" />
+    <Property Name="DeliveryAddress" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblDriver">
+    <Key>
+      <PropertyRef Name="DriverID" />
+    </Key>
+    <Property Name="DriverID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="Initial" Type="nvarchar" MaxLength="150" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="150" />
+    <Property Name="Type" Type="nvarchar" MaxLength="150" />
+    <Property Name="Password" Type="nvarchar" MaxLength="150" />
+    <Property Name="Hint" Type="nvarchar" MaxLength="250" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="s_ColLineage" Type="image" />
+    <Property Name="s_Generation" Type="int" />
+    <Property Name="s_GUID" Type="uniqueidentifier" />
+    <Property Name="s_Lineage" Type="image" />
+  </EntityType>
+  <EntityType Name="tblJob">
+    <Key>
+      <PropertyRef Name="JobID" />
+    </Key>
+    <Property Name="JobID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="250" />
+    <Property Name="CustomerCol" Type="int" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="SysCode" Type="bit" />
+    <Property Name="dtFrom" Type="date" />
+    <Property Name="dtTo" Type="date" />
+    <Property Name="DriverName" Type="nvarchar" MaxLength="150" />
+    <Property Name="DriverInitials" Type="nvarchar" MaxLength="100" />
+    <Property Name="DriverTimeStamp" Type="datetime" />
+    <Property Name="DriverID" Type="int" />
+    <Property Name="MiscCode" Type="nvarchar" MaxLength="150" />
+    <Property Name="Type" Type="int" />
+    <Property Name="JobRef" Type="nvarchar" MaxLength="150" />
+    <Property Name="CustRef" Type="nvarchar" MaxLength="150" />
+    <Property Name="Area" Type="nvarchar" MaxLength="150" />
+    <Property Name="Journey" Type="nvarchar" MaxLength="250" />
+    <Property Name="BasePrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="150" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="150" />
+    <Property Name="DuplicateOf" Type="int" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="UseReturn" Type="bit" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="TruckId" Type="int" />
+    <Property Name="TrailerId" Type="int" />
+    <Property Name="PinNumber" Type="nvarchar" MaxLength="100" />
+    <Property Name="Gen_Address" Type="int" />
+    <Property Name="Gen_Journey" Type="int" />
+    <Property Name="Gen_Notes" Type="int" />
+    <Property Name="s_ColLineage" Type="image" />
+    <Property Name="s_Generation" Type="int" />
+    <Property Name="s_GUID" Type="uniqueidentifier" />
+    <Property Name="s_Lineage" Type="image" />
+  </EntityType>
+  <EntityType Name="tblJob_Conflict">
+    <Key>
+      <PropertyRef Name="ConflictRowId" />
+    </Key>
+    <Property Name="ConflictRowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobID" Type="int" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="250" />
+    <Property Name="CustomerCol" Type="int" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="SysCode" Type="bit" />
+    <Property Name="dtFrom" Type="datetime" />
+    <Property Name="dtTo" Type="datetime" />
+    <Property Name="DriverName" Type="nvarchar" MaxLength="150" />
+    <Property Name="DriverInitials" Type="nvarchar" MaxLength="150" />
+    <Property Name="DriverTimeStamp" Type="datetime" />
+    <Property Name="DriverID" Type="int" />
+    <Property Name="MiscCode" Type="nvarchar" MaxLength="150" />
+    <Property Name="Type" Type="nvarchar" MaxLength="150" />
+    <Property Name="JobRef" Type="nvarchar" MaxLength="150" />
+    <Property Name="CustRef" Type="nvarchar" MaxLength="150" />
+    <Property Name="Area" Type="nvarchar" MaxLength="150" />
+    <Property Name="Journey" Type="nvarchar" MaxLength="150" />
+    <Property Name="BasePrice" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="150" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="150" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="UseReturn" Type="bit" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Gen_Address" Type="int" />
+    <Property Name="Gen_Journey" Type="int" />
+    <Property Name="Gen_Notes" Type="int" />
+    <Property Name="s_ColLineage" Type="image" />
+    <Property Name="s_Generation" Type="int" />
+    <Property Name="s_GUID" Type="uniqueidentifier" />
+    <Property Name="s_Lineage" Type="image" />
+  </EntityType>
+  <EntityType Name="tblJourney">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="Journey" Type="nvarchar" MaxLength="150" />
+    <Property Name="Base" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Gen_Journey" Type="int" />
+    <Property Name="s_ColLineage" Type="image" />
+    <Property Name="s_Generation" Type="int" />
+    <Property Name="s_GUID" Type="uniqueidentifier" />
+    <Property Name="s_Lineage" Type="image" />
+  </EntityType>
+  <EntityType Name="tblTrailer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="TrailerName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblTransactions">
+    <Key>
+      <PropertyRef Name="TID" />
+    </Key>
+    <Property Name="TID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Time" Type="time" Precision="7" />
+    <Property Name="Details" Type="nvarchar" MaxLength="250" />
+    <Property Name="Gen_Details" Type="int" />
+    <Property Name="s_ColLineage" Type="image" />
+    <Property Name="s_Generation" Type="int" />
+    <Property Name="s_GUID" Type="uniqueidentifier" />
+    <Property Name="s_Lineage" Type="image" />
+  </EntityType>
+  <EntityType Name="tblTransactions_Conflict">
+    <Key>
+      <PropertyRef Name="ConflictRowId" />
+    </Key>
+    <Property Name="ConflictRowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TID" Type="int" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="Details" Type="nvarchar" MaxLength="250" />
+    <Property Name="Gen_Details" Type="int" />
+    <Property Name="s_ColLineage" Type="image" />
+    <Property Name="s_Generation" Type="int" />
+    <Property Name="s_GUID" Type="uniqueidentifier" />
+    <Property Name="s_Lineage" Type="image" />
+  </EntityType>
+  <EntityType Name="tblTruck">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="TruckNumber" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="DateAdded" Type="datetime" Nullable="false" />
+    <Property Name="UserType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DWTModelStoreContainer">
+    <EntitySet Name="tblCustomer" EntityType="Self.tblCustomer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDriver" EntityType="Self.tblDriver" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblJob" EntityType="Self.tblJob" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblJob_Conflict" EntityType="Self.tblJob_Conflict" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblJourney" EntityType="Self.tblJourney" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTrailer" EntityType="Self.tblTrailer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTransactions" EntityType="Self.tblTransactions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTransactions_Conflict" EntityType="Self.tblTransactions_Conflict" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTruck" EntityType="Self.tblTruck" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LogisticsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="LogisticsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblCustomers" EntityType="LogisticsModel.tblCustomer" />
+    <EntitySet Name="tblDrivers" EntityType="LogisticsModel.tblDriver" />
+    <EntitySet Name="tblJobs" EntityType="LogisticsModel.tblJob" />
+    <EntitySet Name="tblJob_Conflict" EntityType="LogisticsModel.tblJob_Conflict" />
+    <EntitySet Name="tblJourneys" EntityType="LogisticsModel.tblJourney" />
+    <EntitySet Name="tblTransactions" EntityType="LogisticsModel.tblTransaction" />
+    <EntitySet Name="tblTransactions_Conflict" EntityType="LogisticsModel.tblTransactions_Conflict" />
+  </EntityContainer>
+  <EnumType Name="ChargeCalculationMode">
+    <Member Name="ByWeight" Value="0" />
+    <Member Name="ByPallets" Value="1" />
+    <Member Name="Manual" Value="2" />
+  </EnumType>
+  <EntityType Name="tblCustomer">
+    <Key>
+      <PropertyRef Name="CustID" />
+    </Key>
+    <Property Name="CustID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Colour" Type="Int32" />
+    <Property Name="SysCode" Type="Boolean" />
+    <Property Name="WorkingFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Deleted" Type="Boolean" />
+    <Property Name="Gen_WorkingFolder" Type="Int32" />
+    <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="s_Generation" Type="Int32" />
+    <Property Name="s_GUID" Type="Guid" />
+    <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblDriver">
+    <Key>
+      <PropertyRef Name="DriverID" />
+    </Key>
+    <Property Name="DriverID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Initial" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Hint" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Deleted" Type="Boolean" />
+    <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="s_Generation" Type="Int32" />
+    <Property Name="s_GUID" Type="Guid" />
+    <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblJob">
+    <Key>
+      <PropertyRef Name="JobID" />
+    </Key>
+    <Property Name="JobID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerCol" Type="Int32" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="SysCode" Type="Boolean" />
+    <Property Name="dtFrom" Type="DateTime" Precision="3" />
+    <Property Name="dtTo" Type="DateTime" Precision="3" />
+    <Property Name="DriverName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DriverInitials" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DriverTimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="DriverID" Type="Int32" />
+    <Property Name="MiscCode" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="JobRef" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CustRef" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Area" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Journey" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BasePrice" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Time" Type="DateTime" Precision="3" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Deleted" Type="Boolean" />
+    <Property Name="UseReturn" Type="Boolean" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Gen_Address" Type="Int32" />
+    <Property Name="Gen_Journey" Type="Int32" />
+    <Property Name="Gen_Notes" Type="Int32" />
+    <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="s_Generation" Type="Int32" />
+    <Property Name="s_GUID" Type="Guid" />
+    <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblJob_Conflict">
+    <Key>
+      <PropertyRef Name="ConflictRowId" />
+    </Key>
+    <Property Name="ConflictRowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobID" Type="Int32" />
+    <Property Name="CustomerName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerCol" Type="Int32" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="SysCode" Type="Boolean" />
+    <Property Name="dtFrom" Type="DateTime" Precision="3" />
+    <Property Name="dtTo" Type="DateTime" Precision="3" />
+    <Property Name="DriverName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DriverInitials" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DriverTimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="DriverID" Type="Int32" />
+    <Property Name="MiscCode" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="JobRef" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CustRef" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Area" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Journey" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="BasePrice" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Time" Type="DateTime" Precision="3" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Deleted" Type="Boolean" />
+    <Property Name="UseReturn" Type="Boolean" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Gen_Address" Type="Int32" />
+    <Property Name="Gen_Journey" Type="Int32" />
+    <Property Name="Gen_Notes" Type="Int32" />
+    <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="s_Generation" Type="Int32" />
+    <Property Name="s_GUID" Type="Guid" />
+    <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblJourney">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Journey" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Base" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Gen_Journey" Type="Int32" />
+    <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="s_Generation" Type="Int32" />
+    <Property Name="s_GUID" Type="Guid" />
+    <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblTransaction">
+    <Key>
+      <PropertyRef Name="TID" />
+    </Key>
+    <Property Name="TID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Time" Type="Time" Precision="7" />
+    <Property Name="Details" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Gen_Details" Type="Int32" />
+    <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="s_Generation" Type="Int32" />
+    <Property Name="s_GUID" Type="Guid" />
+    <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblTransactions_Conflict">
+    <Key>
+      <PropertyRef Name="ConflictRowId" />
+    </Key>
+    <Property Name="ConflictRowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TID" Type="Int32" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Time" Type="DateTime" Precision="3" />
+    <Property Name="Details" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Gen_Details" Type="Int32" />
+    <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="s_Generation" Type="Int32" />
+    <Property Name="s_GUID" Type="Guid" />
+    <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+</Schema>

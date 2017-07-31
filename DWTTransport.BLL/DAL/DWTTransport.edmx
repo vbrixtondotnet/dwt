@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DWTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblCustomer">
+          <Key>
+            <PropertyRef Name="CustID" />
+          </Key>
+          <Property Name="CustID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" />
+          <Property Name="Colour" Type="int" />
+          <Property Name="SysCode" Type="bit" />
+          <Property Name="WorkingFolder" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="Gen_WorkingFolder" Type="int" />
+          <Property Name="s_ColLineage" Type="image" />
+          <Property Name="s_Generation" Type="int" />
+          <Property Name="s_GUID" Type="uniqueidentifier" />
+          <Property Name="s_Lineage" Type="image" />
+          <Property Name="DeliveryAddress" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="tblDriver">
+          <Key>
+            <PropertyRef Name="DriverID" />
+          </Key>
+          <Property Name="DriverID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" />
+          <Property Name="Initial" Type="nvarchar" MaxLength="150" />
+          <Property Name="Surname" Type="nvarchar" MaxLength="150" />
+          <Property Name="Type" Type="nvarchar" MaxLength="150" />
+          <Property Name="Password" Type="nvarchar" MaxLength="150" />
+          <Property Name="Hint" Type="nvarchar" MaxLength="250" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="s_ColLineage" Type="image" />
+          <Property Name="s_Generation" Type="int" />
+          <Property Name="s_GUID" Type="uniqueidentifier" />
+          <Property Name="s_Lineage" Type="image" />
+        </EntityType>
+        <EntityType Name="tblJob">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="250" />
+          <Property Name="CustomerCol" Type="int" />
+          <Property Name="CustomerID" Type="int" />
+          <Property Name="SysCode" Type="bit" />
+          <Property Name="dtFrom" Type="date" />
+          <Property Name="dtTo" Type="date" />
+          <Property Name="DriverName" Type="nvarchar" MaxLength="150" />
+          <Property Name="DriverInitials" Type="nvarchar" MaxLength="100" />
+          <Property Name="DriverTimeStamp" Type="datetime" />
+          <Property Name="DriverID" Type="int" />
+          <Property Name="MiscCode" Type="nvarchar" MaxLength="150" />
+          <Property Name="Type" Type="int" />
+          <Property Name="JobRef" Type="nvarchar" MaxLength="150" />
+          <Property Name="CustRef" Type="nvarchar" MaxLength="150" />
+          <Property Name="Area" Type="nvarchar" MaxLength="150" />
+          <Property Name="Journey" Type="nvarchar" MaxLength="250" />
+          <Property Name="BasePrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="InvoiceNo" Type="nvarchar" MaxLength="150" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="150" />
+          <Property Name="DuplicateOf" Type="int" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="UseReturn" Type="bit" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="TruckId" Type="int" />
+          <Property Name="TrailerId" Type="int" />
+          <Property Name="PinNumber" Type="nvarchar" MaxLength="100" />
+          <Property Name="Gen_Address" Type="int" />
+          <Property Name="Gen_Journey" Type="int" />
+          <Property Name="Gen_Notes" Type="int" />
+          <Property Name="s_ColLineage" Type="image" />
+          <Property Name="s_Generation" Type="int" />
+          <Property Name="s_GUID" Type="uniqueidentifier" />
+          <Property Name="s_Lineage" Type="image" />
+        </EntityType>
+        <EntityType Name="tblJob_Conflict">
+          <Key>
+            <PropertyRef Name="ConflictRowId" />
+          </Key>
+          <Property Name="ConflictRowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JobID" Type="int" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="250" />
+          <Property Name="CustomerCol" Type="int" />
+          <Property Name="CustomerID" Type="int" />
+          <Property Name="SysCode" Type="bit" />
+          <Property Name="dtFrom" Type="datetime" />
+          <Property Name="dtTo" Type="datetime" />
+          <Property Name="DriverName" Type="nvarchar" MaxLength="150" />
+          <Property Name="DriverInitials" Type="nvarchar" MaxLength="150" />
+          <Property Name="DriverTimeStamp" Type="datetime" />
+          <Property Name="DriverID" Type="int" />
+          <Property Name="MiscCode" Type="nvarchar" MaxLength="150" />
+          <Property Name="Type" Type="nvarchar" MaxLength="150" />
+          <Property Name="JobRef" Type="nvarchar" MaxLength="150" />
+          <Property Name="CustRef" Type="nvarchar" MaxLength="150" />
+          <Property Name="Area" Type="nvarchar" MaxLength="150" />
+          <Property Name="Journey" Type="nvarchar" MaxLength="150" />
+          <Property Name="BasePrice" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="InvoiceNo" Type="nvarchar" MaxLength="150" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="150" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="UseReturn" Type="bit" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Gen_Address" Type="int" />
+          <Property Name="Gen_Journey" Type="int" />
+          <Property Name="Gen_Notes" Type="int" />
+          <Property Name="s_ColLineage" Type="image" />
+          <Property Name="s_Generation" Type="int" />
+          <Property Name="s_GUID" Type="uniqueidentifier" />
+          <Property Name="s_Lineage" Type="image" />
+        </EntityType>
+        <EntityType Name="tblJourney">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerId" Type="int" />
+          <Property Name="Journey" Type="nvarchar" MaxLength="150" />
+          <Property Name="Base" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Gen_Journey" Type="int" />
+          <Property Name="s_ColLineage" Type="image" />
+          <Property Name="s_Generation" Type="int" />
+          <Property Name="s_GUID" Type="uniqueidentifier" />
+          <Property Name="s_Lineage" Type="image" />
+        </EntityType>
+        <EntityType Name="tblTrailer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="TrailerName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblTransactions">
+          <Key>
+            <PropertyRef Name="TID" />
+          </Key>
+          <Property Name="TID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Time" Type="time" Precision="7" />
+          <Property Name="Details" Type="nvarchar" MaxLength="250" />
+          <Property Name="Gen_Details" Type="int" />
+          <Property Name="s_ColLineage" Type="image" />
+          <Property Name="s_Generation" Type="int" />
+          <Property Name="s_GUID" Type="uniqueidentifier" />
+          <Property Name="s_Lineage" Type="image" />
+        </EntityType>
+        <EntityType Name="tblTransactions_Conflict">
+          <Key>
+            <PropertyRef Name="ConflictRowId" />
+          </Key>
+          <Property Name="ConflictRowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TID" Type="int" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="Details" Type="nvarchar" MaxLength="250" />
+          <Property Name="Gen_Details" Type="int" />
+          <Property Name="s_ColLineage" Type="image" />
+          <Property Name="s_Generation" Type="int" />
+          <Property Name="s_GUID" Type="uniqueidentifier" />
+          <Property Name="s_Lineage" Type="image" />
+        </EntityType>
+        <EntityType Name="tblTruck">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="TruckNumber" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="DateAdded" Type="datetime" Nullable="false" />
+          <Property Name="UserType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DWTModelStoreContainer">
+          <EntitySet Name="tblCustomer" EntityType="Self.tblCustomer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblDriver" EntityType="Self.tblDriver" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblJob" EntityType="Self.tblJob" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblJob_Conflict" EntityType="Self.tblJob_Conflict" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblJourney" EntityType="Self.tblJourney" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTrailer" EntityType="Self.tblTrailer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTransactions" EntityType="Self.tblTransactions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTransactions_Conflict" EntityType="Self.tblTransactions_Conflict" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTruck" EntityType="Self.tblTruck" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DWTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblDriver">
+          <Key>
+            <PropertyRef Name="DriverID" />
+          </Key>
+          <Property Name="DriverID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Initial" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Surname" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Hint" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="s_Generation" Type="Int32" />
+          <Property Name="s_GUID" Type="Guid" />
+          <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblJob_Conflict">
+          <Key>
+            <PropertyRef Name="ConflictRowId" />
+          </Key>
+          <Property Name="ConflictRowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JobID" Type="Int32" />
+          <Property Name="CustomerName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerCol" Type="Int32" />
+          <Property Name="CustomerID" Type="Int32" />
+          <Property Name="SysCode" Type="Boolean" />
+          <Property Name="dtFrom" Type="DateTime" Precision="3" />
+          <Property Name="dtTo" Type="DateTime" Precision="3" />
+          <Property Name="DriverName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="DriverInitials" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="DriverTimeStamp" Type="DateTime" Precision="3" />
+          <Property Name="DriverID" Type="Int32" />
+          <Property Name="MiscCode" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="JobRef" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="CustRef" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Journey" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="BasePrice" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Time" Type="DateTime" Precision="3" />
+          <Property Name="InvoiceNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="UseReturn" Type="Boolean" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gen_Address" Type="Int32" />
+          <Property Name="Gen_Journey" Type="Int32" />
+          <Property Name="Gen_Notes" Type="Int32" />
+          <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="s_Generation" Type="Int32" />
+          <Property Name="s_GUID" Type="Guid" />
+          <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblTransaction">
+          <Key>
+            <PropertyRef Name="TID" />
+          </Key>
+          <Property Name="TID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Time" Type="Time" Precision="7" />
+          <Property Name="Details" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Gen_Details" Type="Int32" />
+          <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="s_Generation" Type="Int32" />
+          <Property Name="s_GUID" Type="Guid" />
+          <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblTransactions_Conflict">
+          <Key>
+            <PropertyRef Name="ConflictRowId" />
+          </Key>
+          <Property Name="ConflictRowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TID" Type="Int32" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Time" Type="DateTime" Precision="3" />
+          <Property Name="Details" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Gen_Details" Type="Int32" />
+          <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="s_Generation" Type="Int32" />
+          <Property Name="s_GUID" Type="Guid" />
+          <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityContainer Name="DWTEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblDrivers" EntityType="Self.tblDriver" />
+          <EntitySet Name="tblJob_Conflict" EntityType="Self.tblJob_Conflict" />
+          <EntitySet Name="tblTransactions" EntityType="Self.tblTransaction" />
+          <EntitySet Name="tblTransactions_Conflict" EntityType="Self.tblTransactions_Conflict" />
+          <EntitySet Name="tblCustomers" EntityType="DWTModel.tblCustomer" />
+          <EntitySet Name="tblUsers" EntityType="DWTModel.tblUser" />
+          <EntitySet Name="tblTrailers" EntityType="DWTModel.tblTrailer" />
+          <EntitySet Name="tblTrucks" EntityType="DWTModel.tblTruck" />
+          <EntitySet Name="tblJobs" EntityType="DWTModel.tblJob" />
+          <EntitySet Name="tblJourneys" EntityType="DWTModel.tblJourney" />
+        </EntityContainer>
+        <EntityType Name="tblCustomer">
+          <Key>
+            <PropertyRef Name="CustID" />
+          </Key>
+          <Property Name="CustID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Colour" Type="Int32" />
+          <Property Name="SysCode" Type="Boolean" />
+          <Property Name="WorkingFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="Gen_WorkingFolder" Type="Int32" />
+          <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="s_Generation" Type="Int32" />
+          <Property Name="s_GUID" Type="Guid" />
+          <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="DeliveryAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="DateAdded" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UserType" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblTrailer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TrailerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblTruck">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TruckNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblJob">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerCol" Type="Int32" />
+          <Property Name="CustomerID" Type="Int32" />
+          <Property Name="SysCode" Type="Boolean" />
+          <Property Name="dtFrom" Type="DateTime" Precision="0" />
+          <Property Name="dtTo" Type="DateTime" Precision="0" />
+          <Property Name="DriverName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="DriverInitials" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DriverTimeStamp" Type="DateTime" Precision="3" />
+          <Property Name="DriverID" Type="Int32" />
+          <Property Name="MiscCode" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="JobRef" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="CustRef" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Journey" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BasePrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Time" Type="DateTime" Precision="3" />
+          <Property Name="InvoiceNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="DuplicateOf" Type="Int32" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="UseReturn" Type="Boolean" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TruckId" Type="Int32" />
+          <Property Name="TrailerId" Type="Int32" />
+          <Property Name="PinNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Gen_Address" Type="Int32" />
+          <Property Name="Gen_Journey" Type="Int32" />
+          <Property Name="Gen_Notes" Type="Int32" />
+          <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="s_Generation" Type="Int32" />
+          <Property Name="s_GUID" Type="Guid" />
+          <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblJourney">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerId" Type="Int32" />
+          <Property Name="Journey" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Base" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Gen_Journey" Type="Int32" />
+          <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="s_Generation" Type="Int32" />
+          <Property Name="s_GUID" Type="Guid" />
+          <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DWTModelStoreContainer" CdmEntityContainer="DWTEntities">
+          <EntitySetMapping Name="tblDrivers">
+            <EntityTypeMapping TypeName="DWTModel.tblDriver">
+              <MappingFragment StoreEntitySet="tblDriver">
+                <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Initial" ColumnName="Initial" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Hint" ColumnName="Hint" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+                <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+                <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+                <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblJob_Conflict">
+            <EntityTypeMapping TypeName="DWTModel.tblJob_Conflict">
+              <MappingFragment StoreEntitySet="tblJob_Conflict">
+                <ScalarProperty Name="ConflictRowId" ColumnName="ConflictRowId" />
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerCol" ColumnName="CustomerCol" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="SysCode" ColumnName="SysCode" />
+                <ScalarProperty Name="dtFrom" ColumnName="dtFrom" />
+                <ScalarProperty Name="dtTo" ColumnName="dtTo" />
+                <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+                <ScalarProperty Name="DriverInitials" ColumnName="DriverInitials" />
+                <ScalarProperty Name="DriverTimeStamp" ColumnName="DriverTimeStamp" />
+                <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+                <ScalarProperty Name="MiscCode" ColumnName="MiscCode" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="JobRef" ColumnName="JobRef" />
+                <ScalarProperty Name="CustRef" ColumnName="CustRef" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Journey" ColumnName="Journey" />
+                <ScalarProperty Name="BasePrice" ColumnName="BasePrice" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="UseReturn" ColumnName="UseReturn" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Gen_Address" ColumnName="Gen_Address" />
+                <ScalarProperty Name="Gen_Journey" ColumnName="Gen_Journey" />
+                <ScalarProperty Name="Gen_Notes" ColumnName="Gen_Notes" />
+                <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+                <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+                <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+                <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTransactions">
+            <EntityTypeMapping TypeName="DWTModel.tblTransaction">
+              <MappingFragment StoreEntitySet="tblTransactions">
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="Gen_Details" ColumnName="Gen_Details" />
+                <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+                <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+                <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+                <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTransactions_Conflict">
+            <EntityTypeMapping TypeName="DWTModel.tblTransactions_Conflict">
+              <MappingFragment StoreEntitySet="tblTransactions_Conflict">
+                <ScalarProperty Name="ConflictRowId" ColumnName="ConflictRowId" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="Gen_Details" ColumnName="Gen_Details" />
+                <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+                <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+                <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+                <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCustomers">
+            <EntityTypeMapping TypeName="DWTModel.tblCustomer">
+              <MappingFragment StoreEntitySet="tblCustomer">
+                <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+                <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+                <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+                <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+                <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+                <ScalarProperty Name="Gen_WorkingFolder" ColumnName="Gen_WorkingFolder" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="WorkingFolder" ColumnName="WorkingFolder" />
+                <ScalarProperty Name="SysCode" ColumnName="SysCode" />
+                <ScalarProperty Name="Colour" ColumnName="Colour" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="CustID" ColumnName="CustID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUsers">
+            <EntityTypeMapping TypeName="DWTModel.tblUser">
+              <MappingFragment StoreEntitySet="tblUser">
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+                <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTrailers">
+            <EntityTypeMapping TypeName="DWTModel.tblTrailer">
+              <MappingFragment StoreEntitySet="tblTrailer">
+                <ScalarProperty Name="TrailerName" ColumnName="TrailerName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTrucks">
+            <EntityTypeMapping TypeName="DWTModel.tblTruck">
+              <MappingFragment StoreEntitySet="tblTruck">
+                <ScalarProperty Name="TruckNumber" ColumnName="TruckNumber" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblJobs">
+            <EntityTypeMapping TypeName="DWTModel.tblJob">
+              <MappingFragment StoreEntitySet="tblJob">
+                <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+                <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+                <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+                <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+                <ScalarProperty Name="Gen_Notes" ColumnName="Gen_Notes" />
+                <ScalarProperty Name="Gen_Journey" ColumnName="Gen_Journey" />
+                <ScalarProperty Name="Gen_Address" ColumnName="Gen_Address" />
+                <ScalarProperty Name="PinNumber" ColumnName="PinNumber" />
+                <ScalarProperty Name="TrailerId" ColumnName="TrailerId" />
+                <ScalarProperty Name="TruckId" ColumnName="TruckId" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="UseReturn" ColumnName="UseReturn" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="DuplicateOf" ColumnName="DuplicateOf" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="BasePrice" ColumnName="BasePrice" />
+                <ScalarProperty Name="Journey" ColumnName="Journey" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="CustRef" ColumnName="CustRef" />
+                <ScalarProperty Name="JobRef" ColumnName="JobRef" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="MiscCode" ColumnName="MiscCode" />
+                <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+                <ScalarProperty Name="DriverTimeStamp" ColumnName="DriverTimeStamp" />
+                <ScalarProperty Name="DriverInitials" ColumnName="DriverInitials" />
+                <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+                <ScalarProperty Name="dtTo" ColumnName="dtTo" />
+                <ScalarProperty Name="dtFrom" ColumnName="dtFrom" />
+                <ScalarProperty Name="SysCode" ColumnName="SysCode" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CustomerCol" ColumnName="CustomerCol" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblJourneys">
+            <EntityTypeMapping TypeName="DWTModel.tblJourney">
+              <MappingFragment StoreEntitySet="tblJourney">
+                <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+                <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+                <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+                <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+                <ScalarProperty Name="Gen_Journey" ColumnName="Gen_Journey" />
+                <ScalarProperty Name="Base" ColumnName="Base" />
+                <ScalarProperty Name="Journey" ColumnName="Journey" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

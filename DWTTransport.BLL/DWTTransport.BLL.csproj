@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DD5C1BC-B426-44D4-A2B5-BB88A0F0AE66}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DWTTransport.BLL</RootNamespace>
+    <AssemblyName>DWTTransport.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Excel, Version=2.1.2.3, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.2.1.2.3\lib\net45\Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DBResult.cs" />
+    <Compile Include="DAL\DWTTransport.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DWTTransport.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DWTTransport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DWTTransport.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DWTTransport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DWTTransport.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\tblCustomer.cs">
+      <DependentUpon>DWTTransport.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\tblDriver.cs">
+      <DependentUpon>DWTTransport.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\tblJob.cs">
+      <DependentUpon>DWTTransport.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\tblJob_Conflict.cs">
+      <DependentUpon>DWTTransport.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\tblJourney.cs">
+      <DependentUpon>DWTTransport.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\tblTrailer.cs">
+      <DependentUpon>DWTTransport.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\tblTransaction.cs">
+      <DependentUpon>DWTTransport.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\tblTransactions_Conflict.cs">
+      <DependentUpon>DWTTransport.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\tblTruck.cs">
+      <DependentUpon>DWTTransport.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\tblUser.cs">
+      <DependentUpon>DWTTransport.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CustomerModel.cs" />
+    <Compile Include="Model\DaybookModel.cs" />
+    <Compile Include="Model\DriverModel.cs" />
+    <Compile Include="Model\JourneyModel.cs" />
+    <Compile Include="Model\TrailerModel.cs" />
+    <Compile Include="Model\TruckModel.cs" />
+    <Compile Include="Model\UserModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Interfaces\IUserService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Services\JourneyService.cs" />
+    <Compile Include="Services\Interfaces\IJourneyService.cs" />
+    <Compile Include="Services\InvoiceService.cs" />
+    <Compile Include="Services\DriverService.cs" />
+    <Compile Include="Services\CustomerService.cs" />
+    <Compile Include="Services\DaybookService.cs" />
+    <Compile Include="Services\Interfaces\ICustomerService.cs" />
+    <Compile Include="Services\Interfaces\IDaybookService.cs" />
+    <Compile Include="Services\Interfaces\IDriverService.cs" />
+    <Compile Include="Services\Interfaces\IInvoiceService.cs" />
+    <Compile Include="Services\Interfaces\IWorkloadService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DAL\DWTTransport.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DWTTransport.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="DAL\DWTTransport.edmx.diagram">
+      <DependentUpon>DWTTransport.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DAL\DWTTransport.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DWTTransport.edmx</DependentUpon>
+      <LastGenOutput>DWTTransport.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\DWTTransport.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DWTTransport.edmx</DependentUpon>
+      <LastGenOutput>DWTTransport.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

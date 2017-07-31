@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DWTTransport.BLL", "DWTTransport.BLL\DWTTransport.BLL.csproj", "{1DD5C1BC-B426-44D4-A2B5-BB88A0F0AE66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DWTTransport", "DWTTransport\DWTTransport.csproj", "{A6CC27C6-DCBC-44D7-90AF-127E6965D452}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DD5C1BC-B426-44D4-A2B5-BB88A0F0AE66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD5C1BC-B426-44D4-A2B5-BB88A0F0AE66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD5C1BC-B426-44D4-A2B5-BB88A0F0AE66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD5C1BC-B426-44D4-A2B5-BB88A0F0AE66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6CC27C6-DCBC-44D7-90AF-127E6965D452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CC27C6-DCBC-44D7-90AF-127E6965D452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CC27C6-DCBC-44D7-90AF-127E6965D452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CC27C6-DCBC-44D7-90AF-127E6965D452}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,115 @@
+5/11/2017 9:16:18 PM
+User:admin
+
+Exception while Import Sentinel:
+System.InvalidOperationException: There is an error in XML document (5, 2). ---> System.OverflowException: Value was either too large or too small for an unsigned byte.
+   at System.Byte.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read3_MessageHeader(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read19_ConsignmentMessage(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read20_ConsignmentMessage()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at Logistics.BLL.BusinessLogic.ImportSentinelOrders(String userId, TextReader reader, String& exportSentinelFileName) in G:\Workspaces\CraigCanavan\logistics\Logistics.BLL\BusinessLogic.cs:line 3810
+   at Logistics.UI.StockManagement.Orders.barButtonItem1_ItemClick(Object sender, ItemClickEventArgs e) in G:\Workspaces\CraigCanavan\logistics\Logistics\UI\StockManagement\Orders.cs:line 214
+
+5/11/2017 9:22:57 PM
+User:admin
+
+Exception while Import Sentinel:
+System.InvalidOperationException: There is an error in XML document (5, 2). ---> System.OverflowException: Value was either too large or too small for an unsigned byte.
+   at System.Byte.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read3_MessageHeader(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read19_ConsignmentMessage(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read20_ConsignmentMessage()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at Logistics.BLL.BusinessLogic.ImportSentinelOrders(String userId, TextReader reader, String& exportSentinelFileName) in G:\Workspaces\CraigCanavan\logistics\Logistics.BLL\BusinessLogic.cs:line 3810
+   at Logistics.UI.StockManagement.Orders.barButtonItem1_ItemClick(Object sender, ItemClickEventArgs e) in G:\Workspaces\CraigCanavan\logistics\Logistics\UI\StockManagement\Orders.cs:line 214
+
+5/11/2017 9:27:49 PM
+User:admin
+
+Exception while Import Sentinel:
+System.InvalidOperationException: There is an error in XML document (5, 2). ---> System.OverflowException: Value was either too large or too small for an unsigned byte.
+   at System.Byte.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read3_MessageHeader(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read19_ConsignmentMessage(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read20_ConsignmentMessage()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at Logistics.BLL.BusinessLogic.ImportSentinelOrders(String userId, TextReader reader, String& exportSentinelFileName) in G:\Workspaces\CraigCanavan\logistics\Logistics.BLL\BusinessLogic.cs:line 3810
+   at Logistics.UI.StockManagement.Orders.barButtonItem1_ItemClick(Object sender, ItemClickEventArgs e) in G:\Workspaces\CraigCanavan\logistics\Logistics\UI\StockManagement\Orders.cs:line 214
+
+5/11/2017 9:28:42 PM
+User:admin
+
+Exception while Import Sentinel:
+System.InvalidOperationException: There is an error in XML document (5, 2). ---> System.OverflowException: Value was either too large or too small for an unsigned byte.
+   at System.Byte.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read3_MessageHeader(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read19_ConsignmentMessage(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read20_ConsignmentMessage()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at Logistics.BLL.BusinessLogic.ImportSentinelOrders(String userId, TextReader reader, String& exportSentinelFileName) in G:\Workspaces\CraigCanavan\logistics\Logistics.BLL\BusinessLogic.cs:line 3810
+   at Logistics.UI.StockManagement.Orders.barButtonItem1_ItemClick(Object sender, ItemClickEventArgs e) in G:\Workspaces\CraigCanavan\logistics\Logistics\UI\StockManagement\Orders.cs:line 214
+
+5/12/2017 12:36:46 AM
+User:admin
+
+Exception while Import Sentinel:
+System.InvalidOperationException: There is an error in XML document (5, 2). ---> System.OverflowException: Value was either too large or too small for an unsigned byte.
+   at System.Byte.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read3_MessageHeader(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read19_ConsignmentMessage(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read20_ConsignmentMessage()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at Logistics.BLL.BusinessLogic.ImportSentinelOrders(String userId, TextReader reader, String& exportSentinelFileName) in G:\Workspaces\CraigCanavan\logistics\Logistics.BLL\BusinessLogic.cs:line 3810
+   at Logistics.UI.StockManagement.Orders.barButtonItem1_ItemClick(Object sender, ItemClickEventArgs e) in G:\Workspaces\CraigCanavan\logistics\Logistics\UI\StockManagement\Orders.cs:line 214
+
+5/16/2017 9:00:30 AM
+User:admin
+
+Exception while Import Sentinel:
+System.InvalidOperationException: There is an error in XML document (5, 2). ---> System.OverflowException: Value was either too large or too small for an unsigned byte.
+   at System.Byte.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read3_MessageHeader(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read19_ConsignmentMessage(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderConsignmentMessage.Read20_ConsignmentMessage()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at Logistics.BLL.BusinessLogic.ImportSentinelOrders(String userId, TextReader reader, String& exportSentinelFileName) in G:\Workspaces\CraigCanavan\logistics\Logistics.BLL\BusinessLogic.cs:line 3810
+   at Logistics.UI.StockManagement.Orders.barButtonItem1_ItemClick(Object sender, ItemClickEventArgs e) in G:\Workspaces\CraigCanavan\logistics\Logistics\UI\StockManagement\Orders.cs:line 214
+
+5/16/2017 9:11:56 AM
+User:admin
+
+Exception while Import Sentinel:
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.NetworkStream'.
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FtpDataStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.IO.StreamReader.ReadBuffer(Char[] userBuffer, Int32 userOffset, Int32 desiredChars, Boolean& readToUserBuffer)
+   at System.IO.StreamReader.Read(Char[] buffer, Int32 index, Int32 count)
+   at System.Xml.XmlTextReaderImpl.ReadData()
+   at System.Xml.XmlTextReaderImpl.InitTextReaderInput(String baseUriStr, Uri baseUri, TextReader input)
+   at System.Xml.XmlTextReaderImpl..ctor(String url, TextReader input, XmlNameTable nt)
+   at System.Xml.XmlTextReader..ctor(TextReader input)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at Logistics.BLL.BusinessLogic.ImportSentinelOrders(String userId, TextReader reader, String& exportSentinelFileName) in G:\Workspaces\CraigCanavan\logistics\Logistics.BLL\BusinessLogic.cs:line 3815
+   at Logistics.UI.StockManagement.Orders.barButtonItem1_ItemClick(Object sender, ItemClickEventArgs e) in G:\Workspaces\CraigCanavan\logistics\Logistics\UI\StockManagement\Orders.cs:line 214
+
+5/16/2017 9:21:00 AM
+User:admin
+
+Exception while Import Sentinel:
+System.ArgumentException: Any area with name "Retford Road" was found. Please create it.
+   at Logistics.BLL.BusinessLogic.InsertSentinelOrderFromImport(ConsignmentMessage importItem, String userId, String& exportSentinelFileName) in G:\Workspaces\CraigCanavan\logistics\Logistics.BLL\BusinessLogic.cs:line 3655
+

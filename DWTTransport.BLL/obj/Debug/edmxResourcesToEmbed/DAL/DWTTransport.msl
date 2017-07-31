@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DWTModelStoreContainer" CdmEntityContainer="DWTEntities">
+    <EntitySetMapping Name="tblDrivers">
+      <EntityTypeMapping TypeName="DWTModel.tblDriver">
+        <MappingFragment StoreEntitySet="tblDriver">
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Initial" ColumnName="Initial" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Hint" ColumnName="Hint" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+          <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+          <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+          <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblJob_Conflict">
+      <EntityTypeMapping TypeName="DWTModel.tblJob_Conflict">
+        <MappingFragment StoreEntitySet="tblJob_Conflict">
+          <ScalarProperty Name="ConflictRowId" ColumnName="ConflictRowId" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerCol" ColumnName="CustomerCol" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="SysCode" ColumnName="SysCode" />
+          <ScalarProperty Name="dtFrom" ColumnName="dtFrom" />
+          <ScalarProperty Name="dtTo" ColumnName="dtTo" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="DriverInitials" ColumnName="DriverInitials" />
+          <ScalarProperty Name="DriverTimeStamp" ColumnName="DriverTimeStamp" />
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="MiscCode" ColumnName="MiscCode" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="JobRef" ColumnName="JobRef" />
+          <ScalarProperty Name="CustRef" ColumnName="CustRef" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Journey" ColumnName="Journey" />
+          <ScalarProperty Name="BasePrice" ColumnName="BasePrice" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="UseReturn" ColumnName="UseReturn" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Gen_Address" ColumnName="Gen_Address" />
+          <ScalarProperty Name="Gen_Journey" ColumnName="Gen_Journey" />
+          <ScalarProperty Name="Gen_Notes" ColumnName="Gen_Notes" />
+          <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+          <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+          <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+          <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTransactions">
+      <EntityTypeMapping TypeName="DWTModel.tblTransaction">
+        <MappingFragment StoreEntitySet="tblTransactions">
+          <ScalarProperty Name="TID" ColumnName="TID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="Gen_Details" ColumnName="Gen_Details" />
+          <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+          <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+          <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+          <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTransactions_Conflict">
+      <EntityTypeMapping TypeName="DWTModel.tblTransactions_Conflict">
+        <MappingFragment StoreEntitySet="tblTransactions_Conflict">
+          <ScalarProperty Name="ConflictRowId" ColumnName="ConflictRowId" />
+          <ScalarProperty Name="TID" ColumnName="TID" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="Gen_Details" ColumnName="Gen_Details" />
+          <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+          <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+          <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+          <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCustomers">
+      <EntityTypeMapping TypeName="DWTModel.tblCustomer">
+        <MappingFragment StoreEntitySet="tblCustomer">
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+          <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+          <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+          <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+          <ScalarProperty Name="Gen_WorkingFolder" ColumnName="Gen_WorkingFolder" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="WorkingFolder" ColumnName="WorkingFolder" />
+          <ScalarProperty Name="SysCode" ColumnName="SysCode" />
+          <ScalarProperty Name="Colour" ColumnName="Colour" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="CustID" ColumnName="CustID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="DWTModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTrailers">
+      <EntityTypeMapping TypeName="DWTModel.tblTrailer">
+        <MappingFragment StoreEntitySet="tblTrailer">
+          <ScalarProperty Name="TrailerName" ColumnName="TrailerName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTrucks">
+      <EntityTypeMapping TypeName="DWTModel.tblTruck">
+        <MappingFragment StoreEntitySet="tblTruck">
+          <ScalarProperty Name="TruckNumber" ColumnName="TruckNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblJobs">
+      <EntityTypeMapping TypeName="DWTModel.tblJob">
+        <MappingFragment StoreEntitySet="tblJob">
+          <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+          <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+          <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+          <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+          <ScalarProperty Name="Gen_Notes" ColumnName="Gen_Notes" />
+          <ScalarProperty Name="Gen_Journey" ColumnName="Gen_Journey" />
+          <ScalarProperty Name="Gen_Address" ColumnName="Gen_Address" />
+          <ScalarProperty Name="PinNumber" ColumnName="PinNumber" />
+          <ScalarProperty Name="TrailerId" ColumnName="TrailerId" />
+          <ScalarProperty Name="TruckId" ColumnName="TruckId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="UseReturn" ColumnName="UseReturn" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="DuplicateOf" ColumnName="DuplicateOf" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="BasePrice" ColumnName="BasePrice" />
+          <ScalarProperty Name="Journey" ColumnName="Journey" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="CustRef" ColumnName="CustRef" />
+          <ScalarProperty Name="JobRef" ColumnName="JobRef" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="MiscCode" ColumnName="MiscCode" />
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="DriverTimeStamp" ColumnName="DriverTimeStamp" />
+          <ScalarProperty Name="DriverInitials" ColumnName="DriverInitials" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="dtTo" ColumnName="dtTo" />
+          <ScalarProperty Name="dtFrom" ColumnName="dtFrom" />
+          <ScalarProperty Name="SysCode" ColumnName="SysCode" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerCol" ColumnName="CustomerCol" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblJourneys">
+      <EntityTypeMapping TypeName="DWTModel.tblJourney">
+        <MappingFragment StoreEntitySet="tblJourney">
+          <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+          <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+          <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+          <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+          <ScalarProperty Name="Gen_Journey" ColumnName="Gen_Journey" />
+          <ScalarProperty Name="Base" ColumnName="Base" />
+          <ScalarProperty Name="Journey" ColumnName="Journey" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
