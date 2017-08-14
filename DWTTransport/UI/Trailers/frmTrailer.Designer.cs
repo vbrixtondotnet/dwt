@@ -55,9 +55,10 @@
             // 
             this.groupControl3.Controls.Add(this.daybookImportDetailedGrid);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl3.Location = new System.Drawing.Point(3, 15);
+            this.groupControl3.Location = new System.Drawing.Point(3, 19);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(735, 696);
+            this.groupControl3.Size = new System.Drawing.Size(859, 856);
             this.groupControl3.TabIndex = 0;
             this.groupControl3.Text = "Customer";
             // 
@@ -65,10 +66,12 @@
             // 
             this.daybookImportDetailedGrid.DataSource = this.dsTrailer;
             this.daybookImportDetailedGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.daybookImportDetailedGrid.Location = new System.Drawing.Point(2, 21);
+            this.daybookImportDetailedGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.daybookImportDetailedGrid.Location = new System.Drawing.Point(2, 24);
             this.daybookImportDetailedGrid.MainView = this.gridView1;
+            this.daybookImportDetailedGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.daybookImportDetailedGrid.Name = "daybookImportDetailedGrid";
-            this.daybookImportDetailedGrid.Size = new System.Drawing.Size(731, 673);
+            this.daybookImportDetailedGrid.Size = new System.Drawing.Size(855, 830);
             this.daybookImportDetailedGrid.TabIndex = 1;
             this.daybookImportDetailedGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
@@ -121,25 +124,27 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.groupControl3, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(230, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(268, 0);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.tableLayoutPanel4.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 702F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(741, 714);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 864F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(865, 879);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // frmTrailer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 714);
+            this.ClientSize = new System.Drawing.Size(1133, 879);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frmTrailer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "Trucks";
+            this.Text = "Trailers";
             this.Load += new System.EventHandler(this.frmCustomer_Load);
             this.Controls.SetChildIndex(this.tableLayoutPanel4, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dsTrailer)).EndInit();

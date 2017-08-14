@@ -60,10 +60,20 @@ namespace DWTTransport.BLL.Services
             {
                 DaybookModel dbookModel = new DaybookModel(job);
                 var customer = db.tblCustomers.FirstOrDefault(c => c.CustID == dbookModel.CustomerID);
+                var truck = db.tblTrucks.FirstOrDefault(t => t.Id == dbookModel.TruckId);
+                var trailer = db.tblTrailers.FirstOrDefault(t => t.Id == dbookModel.TrailerId);
 
                 if (customer != null)
                 {
                     dbookModel.Customer = new CustomerModel(customer);
+                }
+                if (truck != null)
+                {
+                    dbookModel.Truck = truck.Name;
+                }
+                if (trailer != null)
+                {
+                    dbookModel.Trailer = trailer.Name;
                 }
                 dbooks.Add(dbookModel);
 
@@ -126,7 +136,7 @@ namespace DWTTransport.BLL.Services
                             retJob.Time = job.Time;
                             retJob.Journey = job.Journey;
                             retJob.Type = job.Type;
-                            retJob.MiscCode = job.MiscCode;
+                            retJob.MiscCode = dateFrom == dateTo.AddDays(-2) ? string.Format("{0}-RETURNED", job.MiscCode) : job.MiscCode;
                             retJob.TruckId = job.TruckId;
                             retJob.PinNumber = job.PinNumber;
                             retJob.TrailerId = job.TrailerId;

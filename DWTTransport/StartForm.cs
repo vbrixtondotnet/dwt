@@ -10,6 +10,7 @@ using DWTTransport.UI.Drivers;
 using DWTTransport.UI;
 using DWTTransport.UI.Journeys;
 using DWTTransport.UI.Trucks;
+using DWTTransport.UI.Trailers;
 
 namespace DWTTransport
 {
@@ -85,6 +86,9 @@ namespace DWTTransport
                 case "TRUCKS":
                     this.btnAdd.Caption = "Add Truck";
                     break;
+                case "TRAILERS":
+                    this.btnAdd.Caption = "Add Trailer";
+                    break;
 
                 default:
                     this.ribbonPageGroupAddBtn.Visible = false;
@@ -158,6 +162,9 @@ namespace DWTTransport
                     break;
                 case "ADD TRUCK":
                     dialogForm = new frmAddTruck();
+                    break;
+                case "ADD TRAILER":
+                    dialogForm = new frmAddTrailer();
                     break;
             }
 

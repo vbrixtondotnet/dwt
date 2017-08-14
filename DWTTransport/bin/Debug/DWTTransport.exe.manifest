@@ -1923,26 +1923,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DWTTransport.exe" size="1029120">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DWTTransport.exe" size="1031680">
       <assemblyIdentity name="DWTTransport" version="1.0.1.11" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TRwwrlX4r37aJSm/NwfJX9w03g47Mkza6UQ3WQtso6o=</dsig:DigestValue>
+        <dsig:DigestValue>1j/SHB0P0ZSqACXXxYoJyfdTJrmR8mG42Ilqavquats=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DWTTransport.BLL.dll" size="83968">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DWTTransport.BLL.dll" size="84480">
       <assemblyIdentity name="DWTTransport.BLL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>++e+qJCKXxYVcBFLneFow9maxzA5Gl8biPx0MxdsVbE=</dsig:DigestValue>
+        <dsig:DigestValue>Qob1YtejtaVOkX01uF+QuPq0nyvrcg/1hBHc5r75hxU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

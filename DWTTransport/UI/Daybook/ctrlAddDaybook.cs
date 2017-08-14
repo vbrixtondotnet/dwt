@@ -157,13 +157,18 @@ namespace DWTTransport.UI.Daybook
             this.txtGeneralNotes.Text = currentData.Notes;
             this.txtMiscCode.Text = currentData.MiscCode;
             this.txtInvoice.Text = currentData.InvoiceNo;
-            this.txtTime.Text = currentData.Time != null ? Convert.ToDateTime(currentData.Time).TimeOfDay.ToString() : DateTime.Now.TimeOfDay.ToString();
+
+            TimeSpan timeSpan = currentData.Time != null ? Convert.ToDateTime(currentData.Time).TimeOfDay : DateTime.Now.TimeOfDay;
+
+            this.txtTime.EditValue = Utilities.ConvertTo12HourFormat(timeSpan);
+
+
             this.cboCustomer.SelectedIndex = selectedCustomerIndex;
             this.cboDriver.SelectedIndex = selectedDriverIndex;
             this.cboTruck.SelectedIndex = selectedTruckIndex;
             this.cboTrailer.SelectedIndex = selectedTrailerIndex;
 
-            if (cboJourney.Items.Count > 0)
+            if (cboJourney.Items.Count > 0 && selectedJourneyIndex < cboJourney.Items.Count)
             {
                 this.cboJourney.SelectedIndex = selectedJourneyIndex;
             }

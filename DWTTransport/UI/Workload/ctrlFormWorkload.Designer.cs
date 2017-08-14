@@ -32,18 +32,18 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.cboTrailers = new System.Windows.Forms.ComboBox();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.cboTrucks = new System.Windows.Forms.ComboBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.cboCustomer = new System.Windows.Forms.ComboBox();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.dateFrom = new DevExpress.XtraEditors.DateEdit();
-            this.dateTo = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.cboDriver = new System.Windows.Forms.ComboBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.cboTrucks = new System.Windows.Forms.ComboBox();
-            this.cboTrailers = new System.Windows.Forms.ComboBox();
+            this.dateFrom = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.dateTo = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.invoiceGrid = new DevExpress.XtraGrid.GridControl();
             this.bsourceInvoice = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -72,8 +72,9 @@
             this.groupControl1.Controls.Add(this.tableLayoutPanel1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(718, 473);
+            this.groupControl1.Size = new System.Drawing.Size(957, 582);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Workload";
             // 
@@ -84,62 +85,102 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.invoiceGrid, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 21);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 24);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(714, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(953, 556);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 6;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
-            this.tableLayoutPanel2.Controls.Add(this.labelControl2, 2, 0);
+            this.tableLayoutPanel2.ColumnCount = 8;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 241F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
+            this.tableLayoutPanel2.Controls.Add(this.cboTrailers, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.labelControl6, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.labelControl5, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cboTrucks, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.labelControl1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cboCustomer, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.labelControl3, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.dateFrom, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.dateTo, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.labelControl5, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.cboDriver, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.labelControl4, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.labelControl6, 4, 1);
-            this.tableLayoutPanel2.Controls.Add(this.cboTrucks, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.cboTrailers, 5, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Controls.Add(this.dateFrom, 7, 0);
+            this.tableLayoutPanel2.Controls.Add(this.labelControl2, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.dateTo, 7, 1);
+            this.tableLayoutPanel2.Controls.Add(this.labelControl3, 6, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.61404F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.38596F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(694, 57);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(945, 70);
             this.tableLayoutPanel2.TabIndex = 0;
             this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
-            // labelControl2
+            // cboTrailers
             // 
-            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cboTrailers.FormattingEnabled = true;
+            this.cboTrailers.Location = new System.Drawing.Point(348, 35);
+            this.cboTrailers.Margin = new System.Windows.Forms.Padding(4);
+            this.cboTrailers.Name = "cboTrailers";
+            this.cboTrailers.Size = new System.Drawing.Size(232, 24);
+            this.cboTrailers.TabIndex = 14;
+            this.cboTrailers.SelectedIndexChanged += new System.EventHandler(this.cboTrailers_SelectedIndexChanged);
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl2.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.labelControl2.Location = new System.Drawing.Point(212, 3);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(32, 13);
-            this.labelControl2.TabIndex = 5;
-            this.labelControl2.Text = "From:";
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl6.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.labelControl6.Location = new System.Drawing.Point(283, 35);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(48, 17);
+            this.labelControl6.TabIndex = 12;
+            this.labelControl6.Text = "Trailer:";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl5.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.labelControl5.Location = new System.Drawing.Point(283, 4);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(44, 17);
+            this.labelControl5.TabIndex = 11;
+            this.labelControl5.Text = "Truck:";
+            // 
+            // cboTrucks
+            // 
+            this.cboTrucks.FormattingEnabled = true;
+            this.cboTrucks.Location = new System.Drawing.Point(348, 4);
+            this.cboTrucks.Margin = new System.Windows.Forms.Padding(4);
+            this.cboTrucks.Name = "cboTrucks";
+            this.cboTrucks.Size = new System.Drawing.Size(232, 24);
+            this.cboTrucks.TabIndex = 13;
+            this.cboTrucks.SelectedIndexChanged += new System.EventHandler(this.cboTrucks_SelectedIndexChanged);
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Location = new System.Drawing.Point(3, 3);
+            this.labelControl1.Location = new System.Drawing.Point(4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(58, 13);
+            this.labelControl1.Size = new System.Drawing.Size(73, 17);
             this.labelControl1.TabIndex = 3;
             this.labelControl1.Text = "Customer:";
             // 
@@ -148,121 +189,100 @@
             this.cboCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboCustomer.FormattingEnabled = true;
-            this.cboCustomer.Location = new System.Drawing.Point(74, 3);
+            this.cboCustomer.Location = new System.Drawing.Point(99, 4);
+            this.cboCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.cboCustomer.Name = "cboCustomer";
-            this.cboCustomer.Size = new System.Drawing.Size(132, 21);
+            this.cboCustomer.Size = new System.Drawing.Size(176, 24);
             this.cboCustomer.TabIndex = 4;
             this.cboCustomer.SelectedIndexChanged += new System.EventHandler(this.cboCustomer_SelectedIndexChanged);
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl3.Location = new System.Drawing.Point(212, 29);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(17, 13);
-            this.labelControl3.TabIndex = 6;
-            this.labelControl3.Text = "To:";
-            // 
-            // dateFrom
-            // 
-            this.dateFrom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateFrom.EditValue = null;
-            this.dateFrom.Location = new System.Drawing.Point(261, 3);
-            this.dateFrom.Name = "dateFrom";
-            this.dateFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateFrom.Size = new System.Drawing.Size(177, 20);
-            this.dateFrom.TabIndex = 7;
-            this.dateFrom.EditValueChanged += new System.EventHandler(this.dateFrom_EditValueChanged);
-            // 
-            // dateTo
-            // 
-            this.dateTo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTo.EditValue = null;
-            this.dateTo.Location = new System.Drawing.Point(261, 29);
-            this.dateTo.Name = "dateTo";
-            this.dateTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateTo.Size = new System.Drawing.Size(177, 20);
-            this.dateTo.TabIndex = 8;
-            this.dateTo.EditValueChanged += new System.EventHandler(this.dateTo_EditValueChanged);
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl5.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.labelControl5.Location = new System.Drawing.Point(444, 3);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(35, 13);
-            this.labelControl5.TabIndex = 11;
-            this.labelControl5.Text = "Truck:";
             // 
             // cboDriver
             // 
             this.cboDriver.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboDriver.FormattingEnabled = true;
-            this.cboDriver.Location = new System.Drawing.Point(74, 29);
+            this.cboDriver.Location = new System.Drawing.Point(99, 35);
+            this.cboDriver.Margin = new System.Windows.Forms.Padding(4);
             this.cboDriver.Name = "cboDriver";
-            this.cboDriver.Size = new System.Drawing.Size(132, 21);
+            this.cboDriver.Size = new System.Drawing.Size(176, 24);
             this.cboDriver.TabIndex = 10;
             this.cboDriver.SelectedIndexChanged += new System.EventHandler(this.cboDriver_SelectedIndexChanged);
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl4.Location = new System.Drawing.Point(3, 29);
+            this.labelControl4.Location = new System.Drawing.Point(4, 35);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(38, 13);
+            this.labelControl4.Size = new System.Drawing.Size(46, 17);
             this.labelControl4.TabIndex = 9;
             this.labelControl4.Text = "Driver:";
             // 
-            // labelControl6
+            // dateFrom
             // 
-            this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dateFrom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl6.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.labelControl6.Location = new System.Drawing.Point(444, 29);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(40, 13);
-            this.labelControl6.TabIndex = 12;
-            this.labelControl6.Text = "Trailer:";
+            this.dateFrom.EditValue = null;
+            this.dateFrom.Location = new System.Drawing.Point(989, 4);
+            this.dateFrom.Margin = new System.Windows.Forms.Padding(4);
+            this.dateFrom.Name = "dateFrom";
+            this.dateFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateFrom.Size = new System.Drawing.Size(123, 22);
+            this.dateFrom.TabIndex = 7;
+            this.dateFrom.EditValueChanged += new System.EventHandler(this.dateFrom_EditValueChanged);
             // 
-            // cboTrucks
+            // labelControl2
             // 
-            this.cboTrucks.FormattingEnabled = true;
-            this.cboTrucks.Location = new System.Drawing.Point(514, 3);
-            this.cboTrucks.Name = "cboTrucks";
-            this.cboTrucks.Size = new System.Drawing.Size(175, 21);
-            this.cboTrucks.TabIndex = 13;
-            this.cboTrucks.SelectedIndexChanged += new System.EventHandler(this.cboTrucks_SelectedIndexChanged);
+            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl2.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.labelControl2.Location = new System.Drawing.Point(901, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(41, 17);
+            this.labelControl2.TabIndex = 5;
+            this.labelControl2.Text = "From:";
             // 
-            // cboTrailers
+            // dateTo
             // 
-            this.cboTrailers.FormattingEnabled = true;
-            this.cboTrailers.Location = new System.Drawing.Point(514, 29);
-            this.cboTrailers.Name = "cboTrailers";
-            this.cboTrailers.Size = new System.Drawing.Size(175, 21);
-            this.cboTrailers.TabIndex = 14;
-            this.cboTrailers.SelectedIndexChanged += new System.EventHandler(this.cboTrailers_SelectedIndexChanged);
+            this.dateTo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTo.EditValue = null;
+            this.dateTo.Location = new System.Drawing.Point(989, 35);
+            this.dateTo.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTo.Name = "dateTo";
+            this.dateTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateTo.Size = new System.Drawing.Size(123, 22);
+            this.dateTo.TabIndex = 8;
+            this.dateTo.EditValueChanged += new System.EventHandler(this.dateTo_EditValueChanged);
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.Location = new System.Drawing.Point(901, 35);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(23, 17);
+            this.labelControl3.TabIndex = 6;
+            this.labelControl3.Text = "To:";
             // 
             // invoiceGrid
             // 
             this.invoiceGrid.DataSource = this.bsourceInvoice;
             this.invoiceGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.invoiceGrid.Location = new System.Drawing.Point(3, 66);
+            this.invoiceGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.invoiceGrid.Location = new System.Drawing.Point(4, 82);
             this.invoiceGrid.MainView = this.gridView1;
+            this.invoiceGrid.Margin = new System.Windows.Forms.Padding(4);
             this.invoiceGrid.Name = "invoiceGrid";
-            this.invoiceGrid.Size = new System.Drawing.Size(708, 381);
+            this.invoiceGrid.Size = new System.Drawing.Size(945, 470);
             this.invoiceGrid.TabIndex = 0;
             this.invoiceGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -349,11 +369,12 @@
             // 
             // ctrlFormWorkload
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ctrlFormWorkload";
-            this.Size = new System.Drawing.Size(718, 473);
+            this.Size = new System.Drawing.Size(957, 582);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -378,7 +399,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.ComboBox cboCustomer;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.DateEdit dateFrom;
         private DevExpress.XtraGrid.GridControl invoiceGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
@@ -394,9 +414,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.DateEdit dateTo;
         private System.Windows.Forms.ComboBox cboDriver;
         private System.Windows.Forms.ComboBox cboTrucks;
         private System.Windows.Forms.ComboBox cboTrailers;
+        private DevExpress.XtraEditors.DateEdit dateFrom;
+        private DevExpress.XtraEditors.DateEdit dateTo;
     }
 }

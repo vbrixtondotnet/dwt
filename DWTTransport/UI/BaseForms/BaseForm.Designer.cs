@@ -39,9 +39,9 @@
             this.panel1.Controls.Add(this.baseMonthCalendar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 739);
+            this.panel1.Size = new System.Drawing.Size(268, 910);
             this.panel1.TabIndex = 0;
             // 
             // baseMonthCalendar
@@ -49,7 +49,7 @@
             this.baseMonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 4);
             this.baseMonthCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.baseMonthCalendar.Location = new System.Drawing.Point(0, 0);
-            this.baseMonthCalendar.Margin = new System.Windows.Forms.Padding(9, 0, 9, 9);
+            this.baseMonthCalendar.Margin = new System.Windows.Forms.Padding(10, 0, 10, 11);
             this.baseMonthCalendar.MaxSelectionCount = 1;
             this.baseMonthCalendar.Name = "baseMonthCalendar";
             this.baseMonthCalendar.ShowTodayCircle = false;
@@ -59,18 +59,20 @@
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(230, 0);
+            this.panel2.Location = new System.Drawing.Point(268, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(741, 739);
+            this.panel2.Size = new System.Drawing.Size(865, 910);
             this.panel2.TabIndex = 1;
             // 
             // BaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 739);
+            this.ClientSize = new System.Drawing.Size(1133, 910);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "BaseForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);

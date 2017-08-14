@@ -32,9 +32,10 @@
             // 
             // frmAddTrailer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(331, 266);
+            this.ClientSize = new System.Drawing.Size(386, 327);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frmAddTrailer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add/Edit Trailer";

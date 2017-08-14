@@ -148,21 +148,23 @@
             this.tableLayoutPanel1.Controls.Add(this.groupControl2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupControl1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 13);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 321F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(735, 321);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 395F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(859, 395);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.daybookImportGrid);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(370, 3);
+            this.groupControl2.Location = new System.Drawing.Point(432, 4);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(362, 315);
+            this.groupControl2.Size = new System.Drawing.Size(424, 387);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Imports";
             // 
@@ -170,13 +172,15 @@
             // 
             this.daybookImportGrid.DataSource = this.dsImports;
             this.daybookImportGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.daybookImportGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             gridLevelNode1.RelationName = "Level1";
             this.daybookImportGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.daybookImportGrid.Location = new System.Drawing.Point(2, 21);
+            this.daybookImportGrid.Location = new System.Drawing.Point(2, 24);
             this.daybookImportGrid.MainView = this.gridView4;
+            this.daybookImportGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.daybookImportGrid.Name = "daybookImportGrid";
-            this.daybookImportGrid.Size = new System.Drawing.Size(358, 292);
+            this.daybookImportGrid.Size = new System.Drawing.Size(420, 361);
             this.daybookImportGrid.TabIndex = 3;
             this.daybookImportGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -214,6 +218,7 @@
             // 
             this.colArea1.FieldName = "Area";
             this.colArea1.Name = "colArea1";
+            this.colArea1.OptionsColumn.AllowEdit = false;
             this.colArea1.Visible = true;
             this.colArea1.VisibleIndex = 1;
             // 
@@ -222,6 +227,7 @@
             this.colJobRef2.Caption = "Container";
             this.colJobRef2.FieldName = "JobRef";
             this.colJobRef2.Name = "colJobRef2";
+            this.colJobRef2.OptionsColumn.AllowEdit = false;
             this.colJobRef2.Visible = true;
             this.colJobRef2.VisibleIndex = 2;
             // 
@@ -246,21 +252,25 @@
             // 
             this.colJobID1.FieldName = "JobID";
             this.colJobID1.Name = "colJobID1";
+            this.colJobID1.OptionsColumn.AllowEdit = false;
             // 
             // colCustomerName2
             // 
             this.colCustomerName2.FieldName = "CustomerName";
             this.colCustomerName2.Name = "colCustomerName2";
+            this.colCustomerName2.OptionsColumn.AllowEdit = false;
             // 
             // colType3
             // 
             this.colType3.FieldName = "Type";
             this.colType3.Name = "colType3";
+            this.colType3.OptionsColumn.AllowEdit = false;
             // 
             // colTruck1
             // 
             this.colTruck1.FieldName = "Truck";
             this.colTruck1.Name = "colTruck1";
+            this.colTruck1.OptionsColumn.AllowEdit = false;
             this.colTruck1.Visible = true;
             this.colTruck1.VisibleIndex = 5;
             // 
@@ -268,6 +278,7 @@
             // 
             this.colTrailer1.FieldName = "Trailer";
             this.colTrailer1.Name = "colTrailer1";
+            this.colTrailer1.OptionsColumn.AllowEdit = false;
             this.colTrailer1.Visible = true;
             this.colTrailer1.VisibleIndex = 6;
             // 
@@ -275,9 +286,10 @@
             // 
             this.groupControl1.Controls.Add(this.daybookExportGrid);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(3, 3);
+            this.groupControl1.Location = new System.Drawing.Point(3, 4);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(361, 315);
+            this.groupControl1.Size = new System.Drawing.Size(423, 387);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Exports";
             // 
@@ -285,13 +297,15 @@
             // 
             this.daybookExportGrid.DataSource = this.dsExports;
             this.daybookExportGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.daybookExportGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             gridLevelNode2.RelationName = "Level1";
             this.daybookExportGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode2});
-            this.daybookExportGrid.Location = new System.Drawing.Point(2, 21);
+            this.daybookExportGrid.Location = new System.Drawing.Point(2, 24);
             this.daybookExportGrid.MainView = this.gridView3;
+            this.daybookExportGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.daybookExportGrid.Name = "daybookExportGrid";
-            this.daybookExportGrid.Size = new System.Drawing.Size(357, 292);
+            this.daybookExportGrid.Size = new System.Drawing.Size(419, 361);
             this.daybookExportGrid.TabIndex = 2;
             this.daybookExportGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -329,6 +343,7 @@
             // 
             this.colArea.FieldName = "Area";
             this.colArea.Name = "colArea";
+            this.colArea.OptionsColumn.AllowEdit = false;
             this.colArea.Visible = true;
             this.colArea.VisibleIndex = 1;
             // 
@@ -337,6 +352,7 @@
             this.colJobRef1.Caption = "Container";
             this.colJobRef1.FieldName = "JobRef";
             this.colJobRef1.Name = "colJobRef1";
+            this.colJobRef1.OptionsColumn.AllowEdit = false;
             this.colJobRef1.Visible = true;
             this.colJobRef1.VisibleIndex = 2;
             // 
@@ -361,16 +377,19 @@
             // 
             this.colJobID.FieldName = "JobID";
             this.colJobID.Name = "colJobID";
+            this.colJobID.OptionsColumn.AllowEdit = false;
             // 
             // colCustomerName1
             // 
             this.colCustomerName1.FieldName = "CustomerName";
             this.colCustomerName1.Name = "colCustomerName1";
+            this.colCustomerName1.OptionsColumn.AllowEdit = false;
             // 
             // colType2
             // 
             this.colType2.FieldName = "Type";
             this.colType2.Name = "colType2";
+            this.colType2.OptionsColumn.AllowEdit = false;
             // 
             // colTruck
             // 
@@ -498,10 +517,12 @@
             // 
             this.daybookImportDetailedGrid.DataSource = this.dsImportsDetailed;
             this.daybookImportDetailedGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.daybookImportDetailedGrid.Location = new System.Drawing.Point(2, 21);
+            this.daybookImportDetailedGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.daybookImportDetailedGrid.Location = new System.Drawing.Point(2, 24);
             this.daybookImportDetailedGrid.MainView = this.gridView1;
+            this.daybookImportDetailedGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.daybookImportDetailedGrid.Name = "daybookImportDetailedGrid";
-            this.daybookImportDetailedGrid.Size = new System.Drawing.Size(725, 169);
+            this.daybookImportDetailedGrid.Size = new System.Drawing.Size(849, 209);
             this.daybookImportDetailedGrid.TabIndex = 1;
             this.daybookImportDetailedGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
@@ -624,10 +645,12 @@
             // 
             this.daybookExportDetailedGrid.DataSource = this.dsExportDetails;
             this.daybookExportDetailedGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.daybookExportDetailedGrid.Location = new System.Drawing.Point(2, 21);
+            this.daybookExportDetailedGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.daybookExportDetailedGrid.Location = new System.Drawing.Point(2, 24);
             this.daybookExportDetailedGrid.MainView = this.gridView2;
+            this.daybookExportDetailedGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.daybookExportDetailedGrid.Name = "daybookExportDetailedGrid";
-            this.daybookExportDetailedGrid.Size = new System.Drawing.Size(725, 169);
+            this.daybookExportDetailedGrid.Size = new System.Drawing.Size(849, 210);
             this.daybookExportDetailedGrid.TabIndex = 2;
             this.daybookExportDetailedGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2,
@@ -645,21 +668,23 @@
             this.tableLayoutPanel2.Controls.Add(this.groupControl3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.groupControl4, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 340);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 419);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(735, 396);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(859, 487);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // groupControl3
             // 
             this.groupControl3.Controls.Add(this.daybookImportDetailedGrid);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl3.Location = new System.Drawing.Point(3, 3);
+            this.groupControl3.Location = new System.Drawing.Point(3, 4);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(729, 192);
+            this.groupControl3.Size = new System.Drawing.Size(853, 235);
             this.groupControl3.TabIndex = 0;
             this.groupControl3.Text = "Imports";
             // 
@@ -667,9 +692,10 @@
             // 
             this.groupControl4.Controls.Add(this.daybookExportDetailedGrid);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl4.Location = new System.Drawing.Point(3, 201);
+            this.groupControl4.Location = new System.Drawing.Point(3, 247);
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(729, 192);
+            this.groupControl4.Size = new System.Drawing.Size(853, 236);
             this.groupControl4.TabIndex = 1;
             this.groupControl4.Text = "Exports";
             // 
@@ -680,28 +706,31 @@
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(230, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(268, 0);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.tableLayoutPanel4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 402F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(741, 739);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 495F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(865, 910);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(67, 4);
             // 
             // frmDaybook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 739);
+            this.ClientSize = new System.Drawing.Size(1133, 910);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frmDaybook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Daybook";
